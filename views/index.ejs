@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Login</h2>
+    <% if (error) { %>
+      <p class="text-danger"><%= error %></p>
+    <% } %>
+    <form action="/login" method="post">
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <!-- Adicione abaixo do formulário na index.ejs -->
+<p>Não tem uma conta? <a href="/register">Registre-se aqui</a>.</p>
+
+  </div>
+</body>
+</html>
